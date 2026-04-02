@@ -1,25 +1,23 @@
-name: Deploy to neocities
+name: Deploy to Neocities
 
-# only run on changes to main
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
-concurrency: # prevent concurrent deploys doing strange things
+concurrency:
   group: deploy-to-neocities
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    # When the dist_dir is ready, deploy it to neocities
-    - name: Deploy to Neocities
-      uses: bcomnes/deploy-to-neocities@v2.0.2
-      with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: true
-        dist_dir: public
+      - uses: actions/checkout@v4
+
+      - name: Deploy
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          dist_dir: public
+          cleanup: true
+          preview_before_deploy: true
