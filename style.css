@@ -1,0 +1,94 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+/*Color Pallet: https://lospec.com/palette-list/reading-mode*/
+
+
+body {
+  background-color: black;
+  background-image: url("./images/background_image.webp");
+  background-size: 20%;
+  color: black;
+  font-family: "Jim Nightshade", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 165%;
+  font-weight: normal;
+  text-align: justify;
+  max-width: 900px;
+  margin: 32px auto;
+  display: flex;
+}
+
+div {
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
+              url("./images/paper-background-texture.webp");
+  padding: 1px 2em;
+  border-radius: 20px;
+}
+h1, h2, h3 {
+  color:#4f321c;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 100%;
+  margin:10px;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #d19601;
+  font-weight: normal;
+}
+
+a:active {
+  text-decoration: none;
+  color: #d19601;
+  font-weight: normal;
+}
+
+.big {
+  font-size: 200%;
+  margin: 10px;
+}
+
+.raven {
+  width: 11%;
+  height: 25%;
+  margin-left: -6%;
+  position: absolute;
+  z-index: revert-layer;
+}
+
+.knife {
+  width: 12%;
+  height: 20%;
+  order:2;
+  align-self: flex-end;
+  margin-left: 30%;
+  position: absolute;
+}
+
+.block {
+  flex-basis: 100%;
+}
